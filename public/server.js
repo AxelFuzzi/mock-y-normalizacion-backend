@@ -1,11 +1,11 @@
 import express from 'express';
 const router = express.Router()
-import faker from './faker/faker.js';
+import faker from '../faker/faker.js';
 import { Server as httpServer } from 'http';
 import { Server as ioServer } from 'socket.io';
-import Sockets from './sockets.js';
+import Sockets from '../sockets.js';
 import mongoose from 'mongoose';
-import msgNormalizr from './normalizr/normalizer.js';
+import msgNormalizr from '../normalizr/normalizer.js';
 
 const msgNormalizer = msgNormalizr;
 
@@ -32,7 +32,7 @@ app.use('/', router.get('/api/productos-test',(req, res)=>{
 
 //----------------------------------productos front-----------------------------
 
-/*const productList = document.getElementById('product-list')
+const productList = document.getElementById('product-list')
 
 fetch('./faker/data.json')
 .then((res) => res.json())
@@ -59,7 +59,7 @@ fetch('./faker/data.json')
 </div>`
     )
     productList.innerHTML = `<div>${table}</div>`
-})*/
+})
 
 
 /* ----------------------------- server settings ---------------------------- */
