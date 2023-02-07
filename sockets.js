@@ -1,7 +1,7 @@
 //import ProductContainer from './apis/productContainer.js';
 import MsgContainer from './apis/msgContainer.js';
 
-//const productsApi = new ProductContainer(option, 'products');
+//const productsApi = ProductContainer;
 const messagesApi = MsgContainer;
 
 const Sockets = (io) => {
@@ -11,11 +11,11 @@ const Sockets = (io) => {
     // carga inicial de productos
     //socket.emit('view-products', await productsApi.readProducts());
 
-    // actualizacion de productos
-    //socket.on('update-product', async (product) => {
-      //const productId = await productsApi.insertProduct(product);
-      //io.sockets.emit('view-products', await productsApi.readProducts());
-    //});
+     //actualizacion de productos
+    /*socket.on('update-product', async (product) => {
+      const productId = await productsApi.insertProduct(product);
+      io.sockets.emit('view-products', await productsApi.readProducts());
+    });*/
 
     // carga inicial de mensajes
     socket.emit('view-messages', await messagesApi.messageVcontroller());

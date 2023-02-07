@@ -7,7 +7,7 @@ const inputThumbnail = document.getElementById('foto');
 const btnSendProduct = document.getElementById('btnSendProduct');
 const addProductForm = document.getElementById('addProductForm');
 
-/*addProductForm.addEventListener('submit', evt => {
+addProductForm.addEventListener('submit', evt => {
   evt.preventDefault();
   const product = {
     title: addProductForm[0].value,
@@ -18,21 +18,57 @@ const addProductForm = document.getElementById('addProductForm');
   addProductForm.reset();
 });
 
-socket.on('view-products', products => {
+/*socket.on('view-products', products => {
   makeHtmlTable(products).then(html => {
     document.getElementById('product-list').innerHTML = html
   });
-});*/
+});
 
-/*async function makeHtmlTable(products) {
+async function makeHtmlTable(products) {
   const res = await fetch('templates/viewProducts.hbs');
   let template = await res.text();
   template = Handlebars.compile(template);
   const html = template({ products });
   return html;
-}
+}*/
 
-inputName.addEventListener('input', () => {
+/*socket.on('view-products', products => {
+  console.log(products);
+  const html = createListProd(products);
+  document.getElementById('product-list').innerHTML = html;
+});
+
+
+
+function createListProd(products) {
+  const res = await fetch('../faker/data.json') 
+  return products.map(product => {
+    return (`
+            <div class ='table-responsive'>
+                <table class='table table-dark'>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Foto</th>
+                  </tr>
+                  <tr>
+                    <td>${}</td>
+                    <td>${}</td>
+                    <td>
+                      <img
+                      width='50'
+                      src=${}
+                      alt='Image not found'/>
+                    </td>
+                  </tr>
+                </table>
+            </div>
+        `)
+  }).join(" ");
+}*/
+
+
+/*inputName.addEventListener('input', () => {
   const existName = inputName.value.length;
   const existPrice = inputPrice.value.length;
   inputPrice.disabled = !existName;

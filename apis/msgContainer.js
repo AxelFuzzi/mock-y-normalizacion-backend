@@ -1,20 +1,5 @@
 import express from 'express';
 const app = express();
-
-//  async readMsgs(){
-//    try {
-//      const messages = await readAllElements();
-//      if (!messages.length) {
-//        return 'No se encontraron mensajes en la base de datos.';
-//      }
-//      return messages;
-//    } catch (error) {
-//      throw `${error}`;
-//    }
-//  };
-//}
-//
-//export default MsgContainer;
 import messageService from '../service/message.js'
 
 class messageContainer{
