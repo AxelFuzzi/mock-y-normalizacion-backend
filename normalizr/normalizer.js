@@ -54,7 +54,7 @@ const msgNormalizr = async ()=>{
 
     console.log('OBJETO NORMALIZADO')
     const normalizedData = normalize(contenidoID, postSchema);
-    //print(normalizedData)
+    print(normalizedData)
     console.log(JSON.stringify(normalizedData).length)
 
 }

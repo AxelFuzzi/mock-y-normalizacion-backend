@@ -4,6 +4,11 @@ Para instalar dependencias, posicionarse en el directorio e ingresar:
 ```
 npm install
 ```
-Para poder ejecutar el desafío sin errores es necesario tener corriendo un base de datos MySQL / MariaDB en localhost.
+Para ejecutar ingrese **npm run dev**
 
+Utilizar las ruta **/api/productos-test** para ver los productos con FakerJs en la consola.
+
+Los mensajes normalizados se mostraran por consola.
+
+front http://localHost:8080
 

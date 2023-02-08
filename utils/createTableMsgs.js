@@ -10,7 +10,7 @@ const messageSchema = new Schema(
         avatar:String,
       },
       text:String,
-      //timestamp:{type:Date, default:Date.now()}
+      
     },{versionKey:false}
 )
 

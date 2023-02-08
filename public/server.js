@@ -27,16 +27,16 @@ app.use(express.static('public'));
 
 app.use('/', router.get('/api/productos-test',(req, res)=>{
   fakerjs();
-  res.send('OK');
+  res.send('PRODUCTOS GENERADOS EN CONSOLA');
 }) )
 
 //----------------------------------productos front-----------------------------
 
-const productList = document.getElementById('product-list')
+  /*const productList = document.getElementById('product-list')
 
-fetch('./faker/data.json')
-.then((res) => res.json())
-.then((products)=>{
+  fetch('./faker/data.json')
+  .then((res) => res.json())
+  .then((products)=>{
   const table = products.map((product)=>
   `<div class ='table-responsive'>
   <table class='table table-dark'>
@@ -59,7 +59,7 @@ fetch('./faker/data.json')
 </div>`
     )
     productList.innerHTML = `<div>${table}</div>`
-})
+})*/
 
 
 /* ----------------------------- server settings ---------------------------- */

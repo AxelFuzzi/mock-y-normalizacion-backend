@@ -21,56 +21,6 @@
           <div class="jumbotron">
             <h1>Ingresar un producto</h1>
             <br />
-
-            <form id="addProductForm">
-              <!-- Campo nombre del producto -->
-              <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input
-                  id="nombre"
-                  class="form-control"
-                  type="text"
-                  name="title"
-                  placeholder="Nombre"
-                />
-              </div>
-
-              <!-- Campo precio del producto -->
-              <div class="form-group">
-                <label for="precio">Precio</label>
-                <input
-                  disabled
-                  id="precio"
-                  class="form-control"
-                  type="number"
-                  step="any"
-                  name="price"
-                  placeholder="Precio"
-                />
-              </div>
-
-              <!-- Campo url de la foto del producto -->
-              <div class="form-group">
-                <label for="foto">Foto URL</label>
-                <input
-                  disabled
-                  id="foto"
-                  class="form-control"
-                  type="url"
-                  name="thumbnail"
-                  placeholder="URL"
-                />
-              </div>
-              <br />
-              <button
-                disabled
-                id="btnSendProduct"
-                type="submit"
-                class="btn btn-send-product mt-2"
-              >
-                Ingresar
-              </button>
-            </form>
             <hr />
 
             <!-- Acá se inserta la lista de productos en caso de que existan -->
@@ -86,44 +36,10 @@
             <h1>Centro de mensajes</h1>
             <br />
 
-            <!-- Campo de ingreso de email -->
-            <div class="form-group">
-              <label for="inputUsername">Email</label>
-              <input
-                type="text"
-                id="inputUsername"
-                class="form-control"
-                placeholder="Ingresá tu email"
-              />
-            </div>
-
             <hr />
             <!-- Acá se inserta la lista de mensajes en caso de que existan -->
             <div id="message-list"></div>
-            <hr />
-
-            <form id="addMessageForm" autocomplete="off">
-              <div class="form-group">
-                <textarea
-                  disabled
-                  id="inputMessage"
-                  class="form-control"
-                  type="text"
-                  cols="30"
-                  rows="5"
-                  placeholder="Mensaje a enviar"
-                  required
-                ></textarea>
-              </div>
-              <button
-                disabled
-                id="btnSend"
-                type="submit"
-                class="btn btn-send-message mt-2"
-              >
-                Enviar mensaje
-              </button>
-            </form>
+            <hr/>
           </div>
         </div>
       </section>

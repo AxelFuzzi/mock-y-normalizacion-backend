@@ -9,23 +9,10 @@ const Sockets = (io) => {
     console.log(`\nUn cliente con el id: [${socket.id}] se ha conectado.`);
 
     // carga inicial de productos
-    //socket.emit('view-products', await productsApi.readProducts());
-
-     //actualizacion de productos
-    /*socket.on('update-product', async (product) => {
-      const productId = await productsApi.insertProduct(product);
-      io.sockets.emit('view-products', await productsApi.readProducts());
-    });*/
+    //socket.emit('view-products', productsOnFront());
 
     // carga inicial de mensajes
     socket.emit('view-messages', await messagesApi.messageVcontroller());
-
-    // actualizacion de mensajes
-    socket.on('new-message', async (msg) => {
-      msg.fyh = new Date().toLocaleString();
-      await messagesApi.insertMsg(msg);
-      io.sockets.emit('view-messages', await messagesApi.readMsgs());
-    });
 
     socket.on('disconnect', (_) => {
       console.log(`El cliente con el id: [${socket.id}] se ha desconectado.\n`);
